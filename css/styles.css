@@ -1,0 +1,648 @@
+@import url();
+
+@font-face {
+    font-family: 'Futura';
+    src: url('fonts/futura/Futura.woff2') format('woff2'),
+         url('fonts/futura/Futura.woff') format('woff'),
+         url('fonts/futura/Futura.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* tête de page */ 
+
+header.header{
+    display: flex;
+    align-items: center;
+}
+
+header.header img{ /* logo */
+    width: 125px;
+}
+
+
+section.top-page { /* Grosse Image */
+    background: url('../Images/pagedegarde.png');
+    background-size: cover;
+    height: 80vh;
+    padding: 25px;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100vw; /* Pour que la largeur de la page s'adapte à la fenêtre */
+    overflow-x: hidden; /* Pour éviter tout défilement horizontal indésirable */
+  }
+
+/* page de bienvenue */ 
+.landing-page {
+    padding: 20px 50px;
+}
+.big-title{
+    color: white;
+    font-size: 80px;
+}
+
+.scroll-down{
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    bottom: 140px ;
+}
+/* menu de navigation */
+
+/* Supprimer les points de liste et aligner les éléments horizontalement */
+.horizontal-menu {
+    list-style-type: none; /* Supprime les puces des éléments de liste */
+    display: flex; /* Aligne les éléments horizontalement */
+    padding: 0; /* Supprime le padding par défaut */
+    margin: 0; /* Supprime la marge par défaut */
+}
+
+/* Ajoute un espacement de 40px au premier élément du menu */
+.horizontal-menu li:first-child {
+    margin-left: 50px; /* Espace de 40px entre le logo et les titres */
+}
+
+.horizontal-menu li {
+    margin-right: 45px; /* Espacement de 45px entre les éléments */
+}
+
+/* Style pour les liens dans le menu */
+.menu-link {
+    font-weight: bold; /* Mettre le texte en gras */
+    text-decoration: none; /* Enlever le soulignement */
+    color: #ffffff; /* Couleur du texte blanche */
+    font-size: 17px; /* Taille de police de 17px */
+}
+
+.menu-link:hover {
+    color: #a5c6e9; /* Couleur au survol */
+    cursor: pointer; /* Curseur en forme de main */
+}
+
+.frise1 {
+    width: 1450px;   /* Largeur spécifique */
+    height: auto;    /* Ajuste automatiquement la hauteur pour conserver les proportions */
+    position: relative; /* Nécessaire pour que top fonctionne */
+    top: -300px;     /* Déplace l'image vers le haut */
+  }
+
+.frise2 {
+    width: 1450px; /* Largeur spécifique */
+    height: auto; /* Ajuste automatiquement la hauteur pour conserver les proportions */
+    position: relative; /* Nécessaire pour que top fonctionne */
+    top: -200px;     /* Déplace l'image vers le haut */
+}
+
+.frise3 {
+    width: 1450px; /* Largeur spécifique */
+    height: auto; /* Ajuste automatiquement la hauteur pour conserver les proportions */
+    position: relative; /* Nécessaire pour que top fonctionne */
+    top: -190px;     /* Déplace l'image vers le haut */
+}
+
+.frise4 {
+    width: 1450px; /* Largeur spécifique */
+    height: auto; /* Ajuste automatiquement la hauteur pour conserver les proportions */
+    position: relative; /* Nécessaire pour que top fonctionne */
+    top: 90px;     /* Déplace l'image vers le haut */
+}
+
+
+/* Présentation */
+
+.presentation-title{
+    color: black;
+    font-size: 60px;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    height: 100vh;          /* Prend toute la hauteur de la page */
+    margin: 0;              /* Supprime les marges par défaut */
+    margin-top: 30px;
+}
+
+.texte-presentation{
+    color: black;
+    font-size: 23px;
+    font-weight: normal;
+    margin-top: -610px;
+    text-align: justify; /* Justifie le texte */
+    padding-left: 150px; /* Ajoute un espace initial de 4px */
+    padding-right: 800px;
+    margin-left: auto; /* Assure que la marge ne dépasse pas la limite */
+    margin-right: auto; /* Centrage horizontal si nécessaire */
+    max-width: calc(12px + 100%); /* Limite la largeur totale à partir de la marge gauche maximale */
+    line-height: 1.5;
+}
+
+.photo-presentation{
+    position: relative; /* Position relative à son emplacement d'origine */
+    top: -465px; /* Déplace vers le haut (négatif pour monter) */
+    left: 800px; /* Déplace vers la droite (positif pour aller à droite) */
+    width: 450px; /* Largeur fixe */
+    height: auto; /* Ajuste automatiquement la hauteur */
+}
+
+.sourcephotopresentation{
+    padding-left: 130px; /* Ajoute un espace initial de 4px */
+    padding-right: 850px;
+    font-weight: normal;
+    position: relative; /* Position relative à son emplacement d'origine */
+    top: -463px; /* Déplace vers le haut (négatif pour monter) */
+    left: 682px; /* Déplace vers la droite (positif pour aller à droite) */
+}
+
+/* Enfance */
+
+.enfance-title {
+    color: black;
+    font-size: 60px;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;    /* Centre horizontalement */
+    height: 100vh;              /* Prend toute la hauteur de la page */
+    margin: 0;                  /* Supprime les marges par défaut */
+    position: relative;         /* Nécessaire pour le déplacement relatif */
+    top: -200px;                /* Déplace l'élément vers le haut */
+}
+
+.texte-enfance1{
+    color: black;
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: -830px;
+    text-align: justify; /* Justifie le texte */
+    padding-left: 150px; /* Ajoute un espace initial de 4px */
+    padding-right: 800px;
+    margin-left: auto; /* Assure que la marge ne dépasse pas la limite */
+    margin-right: auto; /* Centrage horizontal si nécessaire */
+    max-width: calc(12px + 100%); /* Limite la largeur totale à partir de la marge gauche maximale */
+    line-height: 1.5;
+}
+
+.photo-enfance1{
+    position: relative; /* Position relative à son emplacement d'origine */
+    top: -595px; /* Déplace vers le haut (négatif pour monter) */
+    left: 700px; /* Déplace vers la droite (positif pour aller à droite) */
+    width: 700px; /* Largeur fixe */
+    height: auto; /* Ajuste automatiquement la hauteur */
+}
+
+.sourcephotoenfance1{
+    padding-left: 130px; /* Ajoute un espace initial de 4px */
+    padding-right: 850px;
+    font-weight: normal;
+    position: relative; /* Position relative à son emplacement d'origine */
+    top: -595px; /* Déplace vers le haut (négatif pour monter) */
+    left: 780px; /* Déplace vers la droite (positif pour aller à droite) */
+}
+
+
+.texte-enfance2{
+    color: black;
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: -500px;
+    text-align: justify; /* Justifie le texte */
+    padding-left: 800px; /* Ajoute un espace initial de 4px */
+    padding-right: 150px;
+    margin-left: auto; /* Assure que la marge ne dépasse pas la limite */
+    margin-right: auto; /* Centrage horizontal si nécessaire */
+    max-width: calc(12px + 100%); /* Limite la largeur totale à partir de la marge gauche maximale */
+    line-height: 1.5;
+}
+
+.photo-enfance2{
+    position: relative; /* Position relative à son emplacement d'origine */
+    top: -385px; /* Déplace vers le haut (négatif pour monter) */
+    left: 50px; /* Déplace vers la droite (positif pour aller à droite) */
+    width: 690px; /* Largeur fixe */
+    height: auto; /* Ajuste automatiquement la hauteur */
+}
+
+.sourcephotoenfance2{
+    padding-left: 130px; /* Ajoute un espace initial de 4px */
+    padding-right: 850px;
+    font-weight: normal;
+    position: relative; /* Position relative à son emplacement d'origine */
+    top: -375px; /* Déplace vers le haut (négatif pour monter) */
+    left: 30px; /* Déplace vers la droite (positif pour aller à droite) */
+}
+
+.texte-enfance3{
+    color: black;
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: -350px;
+    text-align: justify; /* Justifie le texte */
+    padding-left: 150px; /* Ajoute un espace initial de 4px */
+    padding-right: 800px;
+    margin-left: auto; /* Assure que la marge ne dépasse pas la limite */
+    margin-right: auto; /* Centrage horizontal si nécessaire */
+    max-width: calc(12px + 100%); /* Limite la largeur totale à partir de la marge gauche maximale */
+    line-height: 1.5;
+}
+
+.photo-enfance3{
+    position: relative; /* Position relative à son emplacement d'origine */
+    top: -555px; /* Déplace vers le haut (négatif pour monter) */
+    left: 700px; /* Déplace vers la droite (positif pour aller à droite) */
+    width: 700px; /* Largeur fixe */
+    height: auto; /* Ajuste automatiquement la hauteur */
+}
+
+.sourcephotoenfance3{
+    padding-left: 130px; /* Ajoute un espace initial de 4px */
+    padding-right: 850px;
+    font-weight: normal;
+    position: relative; /* Position relative à son emplacement d'origine */
+    top: -545px; /* Déplace vers le haut (négatif pour monter) */
+    left: 730px; /* Déplace vers la droite (positif pour aller à droite) */
+}
+
+/* Début de Carrière */
+
+.debcarriere-title {
+    color: black;
+    font-size: 60px;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;    /* Centre horizontalement */
+    height: 100vh;              /* Prend toute la hauteur de la page */
+    margin: 0;                  /* Supprime les marges par défaut */
+    position: relative;         /* Nécessaire pour le déplacement relatif */
+    top: -100px;                /* Déplace l'élément vers le haut */
+}
+.texte-debcarriere1{
+    color: black;
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: -710px;
+    text-align: justify; /* Justifie le texte */
+    padding-left: 150px; /* Ajoute un espace initial de 4px */
+    padding-right: 800px;
+    margin-left: auto; /* Assure que la marge ne dépasse pas la limite */
+    margin-right: auto; /* Centrage horizontal si nécessaire */
+    max-width: calc(12px + 100%); /* Limite la largeur totale à partir de la marge gauche maximale */
+    line-height: 1.5;
+}
+
+.photo-debcarriere1{
+    position: relative; /* Position relative à son emplacement d'origine */
+    top: -635px; /* Déplace vers le haut (négatif pour monter) */
+    left: 700px; /* Déplace vers la droite (positif pour aller à droite) */
+    width: 700px; /* Largeur fixe */
+    height: auto; /* Ajuste automatiquement la hauteur */
+}
+
+.sourcephotodebcarriere1{
+    padding-left: 130px; /* Ajoute un espace initial de 4px */
+    padding-right: 850px;
+    font-weight: normal;
+    position: relative; /* Position relative à son emplacement d'origine */
+    top: -630px; /* Déplace vers le haut (négatif pour monter) */
+    left: 690px; /* Déplace vers la droite (positif pour aller à droite) */
+}
+
+
+.texte-debcarriere2{
+    color: black;
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: -580px;
+    text-align: justify; /* Justifie le texte */
+    padding-left: 800px; /* Ajoute un espace initial de 4px */
+    padding-right: 150px;
+    margin-left: auto; /* Assure que la marge ne dépasse pas la limite */
+    margin-right: auto; /* Centrage horizontal si nécessaire */
+    max-width: calc(12px + 100%); /* Limite la largeur totale à partir de la marge gauche maximale */
+    line-height: 1.5;
+}
+
+.photo-debcarriere2{
+    position: relative; /* Position relative à son emplacement d'origine */
+    top: -475px; /* Déplace vers le haut (négatif pour monter) */
+    left: 50px; /* Déplace vers la droite (positif pour aller à droite) */
+    width: 695px; /* Largeur fixe */
+    height: auto; /* Ajuste automatiquement la hauteur */
+}
+
+.sourcephotodebcarriere2{
+    padding-left: 130px; /* Ajoute un espace initial de 4px */
+    padding-right: 850px;
+    font-weight: normal;
+    position: relative; /* Position relative à son emplacement d'origine */
+    top: -470px; /* Déplace vers le haut (négatif pour monter) */
+    left: 95px; /* Déplace vers la droite (positif pour aller à droite) */
+}
+
+/* Pionnière */
+
+.pionniere-title{
+    color: black;
+    font-size: 50px;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    height: 100vh;          /* Prend toute la hauteur de la page */
+    margin: 0;              /* Supprime les marges par défaut */
+    position: relative;         /* Nécessaire pour le déplacement relatif */
+    top: -105px;                /* Déplace l'élément vers le haut */
+}
+
+.texte-pionniere1{
+    color: black;
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: -740px;
+    text-align: justify; /* Justifie le texte */
+    padding-left: 100px; /* Ajoute un espace initial de 4px */
+    padding-right: 100px;
+    margin-left: auto; /* Assure que la marge ne dépasse pas la limite */
+    margin-right: auto; /* Centrage horizontal si nécessaire */
+    max-width: calc(12px + 100%); /* Limite la largeur totale à partir de la marge gauche maximale */
+    line-height: 1.5;
+}
+
+.photo-pionniere1{
+    position: relative; /* Position relative à son emplacement d'origine */
+    top: 50px; /* Déplace vers le haut (négatif pour monter) */
+    left: 100px; /* Déplace vers la droite (positif pour aller à droite) */
+    width: 600px; /* Largeur fixe */
+    height: auto; /* Ajuste automatiquement la hauteur */
+}
+
+.sourcephotopionniere1{
+    padding-left: 130px; /* Ajoute un espace initial de 4px */
+    padding-right: 850px;
+    font-weight: normal;
+    position: relative; /* Position relative à son emplacement d'origine */
+    top: 50px; /* Déplace vers le haut (négatif pour monter) */
+    left: 55px; /* Déplace vers la droite (positif pour aller à droite) */
+}
+
+.photo-pionniere2{
+    position: relative; /* Position relative à son emplacement d'origine */
+    top: -270px; /* Déplace vers le haut (négatif pour monter) */
+    left: 750px; /* Déplace vers la droite (positif pour aller à droite) */
+    width: 650px; /* Largeur fixe */
+    height: auto; /* Ajuste automatiquement la hauteur */
+}
+
+.sourcephotopionniere2{
+    padding-left: 130px; /* Ajoute un espace initial de 4px */
+    padding-right: 850px;
+    font-weight: normal;
+    position: relative; /* Position relative à son emplacement d'origine */
+    top: -270px; /* Déplace vers le haut (négatif pour monter) */
+    left: 725px; /* Déplace vers la droite (positif pour aller à droite) */
+}
+
+.texte-pionniere2{
+    color: black;
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: -200px;
+    text-align: justify; /* Justifie le texte */
+    padding-left: 100px; /* Ajoute un espace initial de 4px */
+    padding-right: 100px;
+    margin-left: auto; /* Assure que la marge ne dépasse pas la limite */
+    margin-right: auto; /* Centrage horizontal si nécessaire */
+    max-width: calc(12px + 100%); /* Limite la largeur totale à partir de la marge gauche maximale */
+    line-height: 1.5;
+}
+
+/* Son Héritage */
+
+.heritage-title{
+    color: black;
+    font-size: 50px;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    height: 100vh;          /* Prend toute la hauteur de la page */
+    margin: 0;              /* Supprime les marges par défaut */
+    position: relative;         /* Nécessaire pour le déplacement relatif */
+    top: 150px;                /* Déplace l'élément vers le haut */
+}
+
+
+.texte-heritage1{
+    color: black;
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: -500px;
+    text-align: justify; /* Justifie le texte */
+    padding-left: 100px; /* Ajoute un espace initial de 4px */
+    padding-right: 100px;
+    margin-left: auto; /* Assure que la marge ne dépasse pas la limite */
+    margin-right: auto; /* Centrage horizontal si nécessaire */
+    max-width: calc(12px + 100%); /* Limite la largeur totale à partir de la marge gauche maximale */
+    line-height: 1.5;
+}
+
+.photo-heritage1{
+    position: relative; /* Position relative à son emplacement d'origine */
+    top: 20px; /* Déplace vers le haut (négatif pour monter) */
+    left: 285px; /* Déplace vers la droite (positif pour aller à droite) */
+    width: 300px; /* Largeur fixe */
+    height: auto; /* Ajuste automatiquement la hauteur */
+}
+
+.photo-heritage3{
+    position: relative; /* Position relative à son emplacement d'origine */
+    top: 20px; /* Déplace vers le haut (négatif pour monter) */
+    left: 280px; /* Déplace vers la droite (positif pour aller à droite) */
+    width: 280px; /* Largeur fixe */
+    height: auto; /* Ajuste automatiquement la hauteur */
+}
+
+.photo-heritage4{
+    position: relative; /* Position relative à son emplacement d'origine */
+    top: 20px; /* Déplace vers le haut (négatif pour monter) */
+    left: 270px; /* Déplace vers la droite (positif pour aller à droite) */
+    width: 290px; /* Largeur fixe */
+    height: auto; /* Ajuste automatiquement la hauteur */
+}
+.sourcephotoheritage1{
+    padding-left: 130px; /* Ajoute un espace initial de 4px */
+    padding-right: 850px;
+    font-size: 12px;
+    font-weight: normal;
+    position: relative; /* Position relative à son emplacement d'origine */
+    top: 20px; /* Déplace vers le haut (négatif pour monter) */
+    left: 180px; /* Déplace vers la droite (positif pour aller à droite) */
+}
+.sourcephotoheritage3{
+    padding-left: 130px; /* Ajoute un espace initial de 4px */
+    padding-right: 850px;
+    font-size: 12px;
+    font-weight: normal;
+    position: relative; /* Position relative à son emplacement d'origine */
+    top: 5px; /* Déplace vers le haut (négatif pour monter) */
+    left: 500px; /* Déplace vers la droite (positif pour aller à droite) */
+}
+
+.sourcephotoheritage4{
+    padding-left: 130px; /* Ajoute un espace initial de 4px */
+    padding-right: 850px;
+    font-size: 12px;
+    font-weight: normal;
+    position: relative; /* Position relative à son emplacement d'origine */
+    top: -8px; /* Déplace vers le haut (négatif pour monter) */
+    left: 775px; /* Déplace vers la droite (positif pour aller à droite) */
+}
+
+.texte-heritage2{
+    color: black;
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 50px;
+    text-align: justify; /* Justifie le texte */
+    padding-left: 100px; /* Ajoute un espace initial de 4px */
+    padding-right: 100px;
+    margin-left: auto; /* Assure que la marge ne dépasse pas la limite */
+    margin-right: auto; /* Centrage horizontal si nécessaire */
+    max-width: calc(12px + 100%); /* Limite la largeur totale à partir de la marge gauche maximale */
+    line-height: 1.5;
+    margin-bottom: 75px;  /* Ajuste la valeur pour l'espace désiré */
+}
+
+/* Footer */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Lien sans soulignement */
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* Footer global */
+  footer {
+    background-color: #1b1b1b; /* Couleur principale */
+    color: white;
+    font-family: 'Futura', sans-serif; /* À remplacer par une police spécifique */
+    padding: 2em 0;
+    padding-top: 50px; /* Crée un espace de 50px en haut du footer */
+
+  }
+  
+  /* Conteneur principal */
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  /* Sections (Sources, Rejoindre, Newsletter) */
+  .footer-section {
+    flex: 1;
+    margin: 0 1em;
+  }
+  
+  .footer-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1em;
+    font-family: 'Futura', sans-serif; /* Espace pour police spécifique des titres */
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    line-height: 2em;
+  }
+  
+  .footer-section ul li {
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif; /* Police pour le texte des listes */
+  }
+  
+  .footer-section form input[type="email"] {
+    width: 100%;
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 1em;
+  }
+  
+  .footer-section form button {
+    background-color: #2680c2;
+    color: white;
+    border: none;
+    padding: 0.7em;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .footer-section form button:hover {
+    background-color: #1b5b8d;
+  }
+  
+  /* Ligne de séparation */
+  hr {
+    width: 80%;
+    margin: 2em auto;
+    border: 0;
+    border-top: 1px solid #ddd;
+  }
+  
+  /* Réseaux sociaux */
+  .footer-social {
+    text-align: center;
+    margin: 2em 0;
+  }
+  
+  .footer-social p {
+    font-size: 1.2rem;
+    margin-bottom: 1em;
+    font-family: 'Futura', sans-serif; /* Espace pour police spécifique des sous-titres */
+  }
+  
+  .footer-social ul {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    list-style: none;
+  }
+  
+  .footer-social ul li {
+    width: 40px;
+  }
+  
+  .footer-social img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Footer bottom */
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 1em;
+    color: #ddd;
+    font-family: 'Verdana', sans-serif; /* Espace pour texte des mentions légales */
+  }
+  
+  .footer-bottom a {
+    color: #ddd;
+  }
+  
+  .footer-bottom a:hover {
+    color: white;
+  }
+  
+  /* Texte en gras */
+  .bold {
+    font-weight: bold;
+  }
