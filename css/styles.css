@@ -82,18 +82,62 @@ body, html {
     cursor: pointer; /* Curseur en forme de main */
 }
 
-.frise1 {
-    width: 1450px;   /* Largeur spécifique */
-    height: auto;    /* Ajuste automatiquement la hauteur pour conserver les proportions */
-    position: relative; /* Nécessaire pour que top fonctionne */
-    top: -300px;     /* Déplace l'image vers le haut */
-  }
+.frise1global {
+    text-align: center; /* Centre l'image horizontalement */
+    margin-top: 70px; /* Ajoute un espace au-dessus si nécessaire */
+    margin-bottom: 20px; /* Ajoute un espace en dessous */
+    width: 100%; /* Adapte la largeur de la section au conteneur parent */
+}
 
+/* Image de la frise */
+.frise1 {
+    max-width: 100%; /* Adapte l'image à la largeur de l'écran */
+    height: auto; /* Conserve les proportions de l'image */
+}
+
+/* Conteneur de la bannière */
+.frise2global {
+    text-align: center; /* Centre l'image horizontalement */
+    margin-top: 70px; /* Ajoute un espace plus grand au-dessus de la bannière */
+    margin-bottom: 20px; /* Ajoute un espace en dessous */
+    width: 100%; /* Adapte la largeur de la section au conteneur parent */
+    background-color: #f9f9f9; /* Couleur de fond optionnelle (peut être personnalisée) */
+    padding: 10px 0; /* Ajoute un léger padding pour donner de l'espace autour */
+}
+
+/* Image de la bannière */
 .frise2 {
-    width: 1450px; /* Largeur spécifique */
-    height: auto; /* Ajuste automatiquement la hauteur pour conserver les proportions */
-    position: relative; /* Nécessaire pour que top fonctionne */
-    top: -200px;     /* Déplace l'image vers le haut */
+    max-width: 100%; /* L'image prend toute la largeur disponible */
+    height: auto; /* Conserve les proportions de l'image */
+    border-radius: 8px; /* Ajoute des coins arrondis (facultatif) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile (facultatif) */
+}
+
+.frise3global {
+    text-align: center;
+    margin-top: 230px; /* Augmenter l'espace au-dessus pour descendre davantage la bannière */
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 10px 0;
+}
+
+.frise3 {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .frise2global {
+        padding: 5px 0; /* Réduit le padding sur les petits écrans */
+        margin-top: 30px; /* Réduit l'espace au-dessus sur les petits écrans */
+    }
+    .frise2 {
+        border-radius: 4px; /* Coins légèrement arrondis sur petits écrans */
+    }
 }
 
 .frise3 {
@@ -103,317 +147,325 @@ body, html {
     top: -190px;     /* Déplace l'image vers le haut */
 }
 
+.frise4global {
+    text-align: center; /* Centre l'image horizontalement */
+    margin-top: 70px; /* Ajoute un espace au-dessus si nécessaire */
+    margin-bottom: 20px; /* Ajoute un espace en dessous */
+    width: 100%; /* Adapte la largeur de la section au conteneur parent */
+}
+
+/* Image de la frise */
 .frise4 {
-    width: 1450px; /* Largeur spécifique */
-    height: auto; /* Ajuste automatiquement la hauteur pour conserver les proportions */
-    position: relative; /* Nécessaire pour que top fonctionne */
-    top: 90px;     /* Déplace l'image vers le haut */
+    max-width: 100%; /* Adapte l'image à la largeur de l'écran */
+    height: auto; /* Conserve les proportions de l'image */
 }
 
 
 /* Présentation */
+.container1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
 
-.presentation-title{
-    color: black;
-    font-size: 60px;
+/* Titre */
+.presentation-title {
+    font-size: 3em;
+    font-weight: bold;
     text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+/* Contenu */
+.content1 {
     display: flex;
-    justify-content: center; /* Centre horizontalement */
-    height: 100vh;          /* Prend toute la hauteur de la page */
-    margin: 0;              /* Supprime les marges par défaut */
-    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
 }
 
-.texte-presentation{
-    color: black;
-    font-size: 23px;
-    font-weight: normal;
-    margin-top: -610px;
-    text-align: justify; /* Justifie le texte */
-    padding-left: 150px; /* Ajoute un espace initial de 4px */
-    padding-right: 800px;
-    margin-left: auto; /* Assure que la marge ne dépasse pas la limite */
-    margin-right: auto; /* Centrage horizontal si nécessaire */
-    max-width: calc(12px + 100%); /* Limite la largeur totale à partir de la marge gauche maximale */
-    line-height: 1.5;
+/* Texte */
+.texte-presentation {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    text-align: justify;
+    line-height: 1.6;
+
+    font-size: 1.3em; /* Augmente la taille du texte */
+    margin-top: 20px; /* Ajoute un espace au-dessus pour déplacer le texte vers le bas */
+    padding: 10px; /* Ajoute un peu d'espace interne pour aérer */
 }
 
-.photo-presentation{
-    position: relative; /* Position relative à son emplacement d'origine */
-    top: -465px; /* Déplace vers le haut (négatif pour monter) */
-    left: 800px; /* Déplace vers la droite (positif pour aller à droite) */
-    width: 450px; /* Largeur fixe */
-    height: auto; /* Ajuste automatiquement la hauteur */
+/* Image et légende */
+.photo-presentation {
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
+    text-align: center;
 }
 
-.sourcephotopresentation{
-    padding-left: 130px; /* Ajoute un espace initial de 4px */
-    padding-right: 850px;
-    font-weight: normal;
-    position: relative; /* Position relative à son emplacement d'origine */
-    top: -463px; /* Déplace vers le haut (négatif pour monter) */
-    left: 682px; /* Déplace vers la droite (positif pour aller à droite) */
+.photo-presentation img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.caption1 {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Styles responsive */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text, .image {
+        max-width: 100%;
+    }
 }
 
 /* Enfance */
 
+.container2, .container3, .container4 {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+}
+
+/* Titres */
 .enfance-title {
-    color: black;
-    font-size: 60px;
-    text-decoration: underline;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Alignement en flexbox */
+.content2 {
     display: flex;
-    justify-content: center;    /* Centre horizontalement */
-    height: 100vh;              /* Prend toute la hauteur de la page */
-    margin: 0;                  /* Supprime les marges par défaut */
-    position: relative;         /* Nécessaire pour le déplacement relatif */
-    top: -200px;                /* Déplace l'élément vers le haut */
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
 }
 
-.texte-enfance1{
-    color: black;
-    font-size: 20px;
-    font-weight: normal;
-    margin-top: -830px;
-    text-align: justify; /* Justifie le texte */
-    padding-left: 150px; /* Ajoute un espace initial de 4px */
-    padding-right: 800px;
-    margin-left: auto; /* Assure que la marge ne dépasse pas la limite */
-    margin-right: auto; /* Centrage horizontal si nécessaire */
-    max-width: calc(12px + 100%); /* Limite la largeur totale à partir de la marge gauche maximale */
-    line-height: 1.5;
+/* Ordre inversé pour la deuxième section */
+.content2.reverse {
+    flex-direction: row-reverse;
 }
 
-.photo-enfance1{
-    position: relative; /* Position relative à son emplacement d'origine */
-    top: -595px; /* Déplace vers le haut (négatif pour monter) */
-    left: 700px; /* Déplace vers la droite (positif pour aller à droite) */
-    width: 700px; /* Largeur fixe */
-    height: auto; /* Ajuste automatiquement la hauteur */
+/* Texte (50% de la largeur) */
+.texte-enfance1, .texte-enfance2, .texte-enfance3 {
+    flex: 1 1 50%;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
 }
 
-.sourcephotoenfance1{
-    padding-left: 130px; /* Ajoute un espace initial de 4px */
-    padding-right: 850px;
-    font-weight: normal;
-    position: relative; /* Position relative à son emplacement d'origine */
-    top: -595px; /* Déplace vers le haut (négatif pour monter) */
-    left: 780px; /* Déplace vers la droite (positif pour aller à droite) */
+/* Photos (50% de la largeur) */
+.photo-enfance1, .photo-enfance2, .photo-enfance3 {
+    flex: 1 1 50%;
+    text-align: center;
 }
 
-
-.texte-enfance2{
-    color: black;
-    font-size: 20px;
-    font-weight: normal;
-    margin-top: -500px;
-    text-align: justify; /* Justifie le texte */
-    padding-left: 800px; /* Ajoute un espace initial de 4px */
-    padding-right: 150px;
-    margin-left: auto; /* Assure que la marge ne dépasse pas la limite */
-    margin-right: auto; /* Centrage horizontal si nécessaire */
-    max-width: calc(12px + 100%); /* Limite la largeur totale à partir de la marge gauche maximale */
-    line-height: 1.5;
+.photo-enfance1 img, .photo-enfance2 img, .photo-enfance3 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.photo-enfance2{
-    position: relative; /* Position relative à son emplacement d'origine */
-    top: -385px; /* Déplace vers le haut (négatif pour monter) */
-    left: 50px; /* Déplace vers la droite (positif pour aller à droite) */
-    width: 690px; /* Largeur fixe */
-    height: auto; /* Ajuste automatiquement la hauteur */
+/* Légendes des photos */
+.caption1, .caption2, .caption3, .caption4 {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 10px;
+    text-align: center;
 }
 
-.sourcephotoenfance2{
-    padding-left: 130px; /* Ajoute un espace initial de 4px */
-    padding-right: 850px;
-    font-weight: normal;
-    position: relative; /* Position relative à son emplacement d'origine */
-    top: -375px; /* Déplace vers le haut (négatif pour monter) */
-    left: 30px; /* Déplace vers la droite (positif pour aller à droite) */
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content2, .content2.reverse {
+        flex-direction: column;
+    }
 
-.texte-enfance3{
-    color: black;
-    font-size: 20px;
-    font-weight: normal;
-    margin-top: -350px;
-    text-align: justify; /* Justifie le texte */
-    padding-left: 150px; /* Ajoute un espace initial de 4px */
-    padding-right: 800px;
-    margin-left: auto; /* Assure que la marge ne dépasse pas la limite */
-    margin-right: auto; /* Centrage horizontal si nécessaire */
-    max-width: calc(12px + 100%); /* Limite la largeur totale à partir de la marge gauche maximale */
-    line-height: 1.5;
-}
-
-.photo-enfance3{
-    position: relative; /* Position relative à son emplacement d'origine */
-    top: -555px; /* Déplace vers le haut (négatif pour monter) */
-    left: 700px; /* Déplace vers la droite (positif pour aller à droite) */
-    width: 700px; /* Largeur fixe */
-    height: auto; /* Ajuste automatiquement la hauteur */
-}
-
-.sourcephotoenfance3{
-    padding-left: 130px; /* Ajoute un espace initial de 4px */
-    padding-right: 850px;
-    font-weight: normal;
-    position: relative; /* Position relative à son emplacement d'origine */
-    top: -545px; /* Déplace vers le haut (négatif pour monter) */
-    left: 730px; /* Déplace vers la droite (positif pour aller à droite) */
+    .texte-enfance1, .texte-enfance2, .texte-enfance3,
+    .photo-enfance1, .photo-enfance2, .photo-enfance3 {
+        flex: 1 1 100%; /* Occupe toute la largeur sur petits écrans */
+    }
 }
 
 /* Début de Carrière */
 
-.debcarriere-title {
-    color: black;
-    font-size: 60px;
-    text-decoration: underline;
+.container5, .container6 {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+  }
+  /* Titres */
+  .debcarriere-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Alignement en flexbox */
+  .content5 {
     display: flex;
-    justify-content: center;    /* Centre horizontalement */
-    height: 100vh;              /* Prend toute la hauteur de la page */
-    margin: 0;                  /* Supprime les marges par défaut */
-    position: relative;         /* Nécessaire pour le déplacement relatif */
-    top: -100px;                /* Déplace l'élément vers le haut */
-}
-.texte-debcarriere1{
-    color: black;
-    font-size: 20px;
-    font-weight: normal;
-    margin-top: -710px;
-    text-align: justify; /* Justifie le texte */
-    padding-left: 150px; /* Ajoute un espace initial de 4px */
-    padding-right: 800px;
-    margin-left: auto; /* Assure que la marge ne dépasse pas la limite */
-    margin-right: auto; /* Centrage horizontal si nécessaire */
-    max-width: calc(12px + 100%); /* Limite la largeur totale à partir de la marge gauche maximale */
-    line-height: 1.5;
-}
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  /* Première section : texte à gauche et photo à droite */
+  .content5 .texte-debcarriere1 {
+    order: 1; /* Texte à gauche */
+  }
+  
+  .content5 .photo-debcarriere1 {
+    order: 2; /* Photo à droite */
+  }
+  
+  /* Deuxième section : photo à gauche et texte à droite */
+  .content5.reverse .texte-debcarriere2 {
+    order: 2; /* Texte à droite */
+  }
+  
+  .content5.reverse .photo-debcarriere2 {
+    order: 1; /* Photo à gauche */
+    margin-left: -30px; /* Décaler un peu plus à gauche */
+    transform: translateY(-30px); /* Déplacer encore plus haut */
+  }
+  
+  /* Texte (50% de la largeur) */
+  .texte-debcarriere1, .texte-debcarriere2 {
+    flex: 1 1 50%;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+  }
+  
+  /* Photos (50% de la largeur) */
+  .photo-debcarriere1, .photo-debcarriere2 {
+    flex: 1 1 50%;
+    text-align: center;
+  }
+  
+  .photo-debcarriere1 img, .photo-debcarriere2 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Légendes des photos */
+  .caption5, .caption6 {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .content5 {
+      flex-direction: column;
+    }
+  }  
+  
 
-.photo-debcarriere1{
-    position: relative; /* Position relative à son emplacement d'origine */
-    top: -635px; /* Déplace vers le haut (négatif pour monter) */
-    left: 700px; /* Déplace vers la droite (positif pour aller à droite) */
-    width: 700px; /* Largeur fixe */
-    height: auto; /* Ajuste automatiquement la hauteur */
-}
+/* Début de Carrière */
 
-.sourcephotodebcarriere1{
-    padding-left: 130px; /* Ajoute un espace initial de 4px */
-    padding-right: 850px;
-    font-weight: normal;
-    position: relative; /* Position relative à son emplacement d'origine */
-    top: -630px; /* Déplace vers le haut (négatif pour monter) */
-    left: 690px; /* Déplace vers la droite (positif pour aller à droite) */
-}
-
-
-.texte-debcarriere2{
-    color: black;
-    font-size: 20px;
-    font-weight: normal;
-    margin-top: -580px;
-    text-align: justify; /* Justifie le texte */
-    padding-left: 800px; /* Ajoute un espace initial de 4px */
-    padding-right: 150px;
-    margin-left: auto; /* Assure que la marge ne dépasse pas la limite */
-    margin-right: auto; /* Centrage horizontal si nécessaire */
-    max-width: calc(12px + 100%); /* Limite la largeur totale à partir de la marge gauche maximale */
-    line-height: 1.5;
-}
-
-.photo-debcarriere2{
-    position: relative; /* Position relative à son emplacement d'origine */
-    top: -475px; /* Déplace vers le haut (négatif pour monter) */
-    left: 50px; /* Déplace vers la droite (positif pour aller à droite) */
-    width: 695px; /* Largeur fixe */
-    height: auto; /* Ajuste automatiquement la hauteur */
-}
-
-.sourcephotodebcarriere2{
-    padding-left: 130px; /* Ajoute un espace initial de 4px */
-    padding-right: 850px;
-    font-weight: normal;
-    position: relative; /* Position relative à son emplacement d'origine */
-    top: -470px; /* Déplace vers le haut (négatif pour monter) */
-    left: 95px; /* Déplace vers la droite (positif pour aller à droite) */
-}
-
-/* Pionnière */
-
-.pionniere-title{
-    color: black;
-    font-size: 50px;
-    text-decoration: underline;
+.container7, .container8 {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+  }
+  /* Titres */
+  .pionniere-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Alignement en flexbox */
+  .content6 {
     display: flex;
-    justify-content: center; /* Centre horizontalement */
-    height: 100vh;          /* Prend toute la hauteur de la page */
-    margin: 0;              /* Supprime les marges par défaut */
-    position: relative;         /* Nécessaire pour le déplacement relatif */
-    top: -105px;                /* Déplace l'élément vers le haut */
-}
-
-.texte-pionniere1{
-    color: black;
-    font-size: 20px;
-    font-weight: normal;
-    margin-top: -740px;
-    text-align: justify; /* Justifie le texte */
-    padding-left: 100px; /* Ajoute un espace initial de 4px */
-    padding-right: 100px;
-    margin-left: auto; /* Assure que la marge ne dépasse pas la limite */
-    margin-right: auto; /* Centrage horizontal si nécessaire */
-    max-width: calc(12px + 100%); /* Limite la largeur totale à partir de la marge gauche maximale */
-    line-height: 1.5;
-}
-
-.photo-pionniere1{
-    position: relative; /* Position relative à son emplacement d'origine */
-    top: 50px; /* Déplace vers le haut (négatif pour monter) */
-    left: 100px; /* Déplace vers la droite (positif pour aller à droite) */
-    width: 600px; /* Largeur fixe */
-    height: auto; /* Ajuste automatiquement la hauteur */
-}
-
-.sourcephotopionniere1{
-    padding-left: 130px; /* Ajoute un espace initial de 4px */
-    padding-right: 850px;
-    font-weight: normal;
-    position: relative; /* Position relative à son emplacement d'origine */
-    top: 50px; /* Déplace vers le haut (négatif pour monter) */
-    left: 55px; /* Déplace vers la droite (positif pour aller à droite) */
-}
-
-.photo-pionniere2{
-    position: relative; /* Position relative à son emplacement d'origine */
-    top: -270px; /* Déplace vers le haut (négatif pour monter) */
-    left: 750px; /* Déplace vers la droite (positif pour aller à droite) */
-    width: 650px; /* Largeur fixe */
-    height: auto; /* Ajuste automatiquement la hauteur */
-}
-
-.sourcephotopionniere2{
-    padding-left: 130px; /* Ajoute un espace initial de 4px */
-    padding-right: 850px;
-    font-weight: normal;
-    position: relative; /* Position relative à son emplacement d'origine */
-    top: -270px; /* Déplace vers le haut (négatif pour monter) */
-    left: 725px; /* Déplace vers la droite (positif pour aller à droite) */
-}
-
-.texte-pionniere2{
-    color: black;
-    font-size: 20px;
-    font-weight: normal;
-    margin-top: -200px;
-    text-align: justify; /* Justifie le texte */
-    padding-left: 100px; /* Ajoute un espace initial de 4px */
-    padding-right: 100px;
-    margin-left: auto; /* Assure que la marge ne dépasse pas la limite */
-    margin-right: auto; /* Centrage horizontal si nécessaire */
-    max-width: calc(12px + 100%); /* Limite la largeur totale à partir de la marge gauche maximale */
-    line-height: 1.5;
-}
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  /* Première section : texte à gauche et photo à droite */
+  .content6 .texte-pionniere1 {
+    order: 1; /* Texte à gauche */
+  }
+  
+  .content6 .photo-pionniere1 {
+    order: 2; /* Photo à droite */
+  }
+  
+  /* Deuxième section : photo à gauche et texte à droite */
+  .content6.reverse .texte-pionniere2 {
+    order: 2; /* Texte à droite */
+  }
+  
+  .content6.reverse .photo-pionniere2 {
+    order: 1; /* Photo à gauche */
+    margin-left: -30px; /* Décaler un peu plus à gauche */
+    transform: translateY(-30px); /* Déplacer encore plus haut */
+  }
+  
+  /* Texte (50% de la largeur) */
+  .texte-pionniere1, .texte-pionniere2 {
+    flex: 1 1 50%;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+  }
+  
+  /* Photos (50% de la largeur) */
+  .photo-pionniere1, .photo-pionniere2 {
+    flex: 1 1 50%;
+    text-align: center;
+  }
+  
+  .photo-pionniere1 img, .photo-pionniere2 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Légendes des photos */
+  .caption7, .caption8 {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .content5 {
+      flex-direction: column;
+    }
+  }  
 
 /* Son Héritage */
 
